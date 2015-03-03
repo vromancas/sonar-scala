@@ -34,7 +34,7 @@ object Compiler extends Global(new Settings() {
   bootclasspath.append(org.sonar.plugins.scala.ScalaPlugin.getPathToScalaLibrary)
 
 }) {
-
+  
   private val logger = LoggerFactory.getLogger(classOf[Compiler])
 
   try {
