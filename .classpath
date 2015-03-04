@@ -43,6 +43,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_COMPILER_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/Default.BOSlVRoman/Downloads/Java/slf4j-1.7.10/slf4j-api-1.7.10.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Default.BOSlVRoman/Downloads/SonarQube/other/sonar-plugin-api-5.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Default.BOSlVRoman/Downloads/SonarQube/other/sonar-plugin-api-5.0.1.jar" sourcepath="C:/Users/Default.BOSlVRoman/.m2/repository/org/codehaus/sonar/sonar-plugin-api/5.0.1/sonar-plugin-api-5.0.1-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Default.BOSlVRoman/Downloads/SonarQube/other/scalariform-maven-plugin-0.1.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

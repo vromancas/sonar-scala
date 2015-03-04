@@ -19,31 +19,31 @@
  */
 package org.sonar.plugins.scala.cobertura;
 
-import org.sonar.plugins.cobertura.api.AbstractCoberturaParser;
+//import org.sonar.plugins.cobertura.api.AbstractCoberturaParser;
 import org.sonar.api.resources.Resource;
 import org.sonar.plugins.scala.language.ScalaFile;
 
 import java.io.File;
 
-public class ScalaCoberturaParser extends AbstractCoberturaParser {
-    @Override
-    protected Resource<?> getResource(String fileName) {
-        // TODO update the sbt scct plugin to provide the correct fully qualified class name.
-        if (fileName.startsWith("src.main.scala."))
-            fileName = fileName.replace("src.main.scala.", "");
-        else if (fileName.startsWith("app."))
-            fileName = fileName.replace("app.", "");
-
-        int packageTerminator = fileName.lastIndexOf('.');
-
-        if (packageTerminator < 0 ) {
-            return new ScalaFile(null, fileName, false);
-        }
-        else {
-            String packageName = fileName.substring(0, packageTerminator);
-            String className = fileName.substring(packageTerminator + 1, fileName.length());
-
-            return new ScalaFile(packageName, className, false);
-        }
-    }
-}
+//public class ScalaCoberturaParser extends AbstractCoberturaParser {
+//    @Override
+//    protected Resource<?> getResource(String fileName) {
+//        // TODO update the sbt scct plugin to provide the correct fully qualified class name.
+//        if (fileName.startsWith("src.main.scala."))
+//            fileName = fileName.replace("src.main.scala.", "");
+//        else if (fileName.startsWith("app."))
+//            fileName = fileName.replace("app.", "");
+//
+//        int packageTerminator = fileName.lastIndexOf('.');
+//
+//        if (packageTerminator < 0 ) {
+//            return new ScalaFile(null, fileName, false);
+//        }
+//        else {
+//            String packageName = fileName.substring(0, packageTerminator);
+//            String className = fileName.substring(packageTerminator + 1, fileName.length());
+//
+//            return new ScalaFile(packageName, className, false);
+//        }
+//    }
+//}

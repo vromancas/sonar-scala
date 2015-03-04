@@ -33,15 +33,15 @@ public class ScalaPluginTest {
     assertThat(new ScalaPlugin().getExtensions().size(), greaterThan(0));
   }
   
-  @Test
-  public void shouldHaveCoberturaPlugin() {
-	assertTrue(new ScalaPlugin().getExtensions().contains(CoberturaSensor.class));
-  }
+//  @Test
+//  public void shouldHaveCoberturaPlugin() {
+//	assertTrue(new ScalaPlugin().getExtensions().contains(CoberturaSensor.class));
+//  }
 
-  @Test
-  public void shouldHaveSurefirePlugin() {
-    assertTrue(new ScalaPlugin().getExtensions().contains(SurefireSensor.class));
-  }
+//  @Test
+//  public void shouldHaveSurefirePlugin() {
+//    assertTrue(new ScalaPlugin().getExtensions().contains(SurefireSensor.class));
+//  }
 
   @Test
   public void shouldGetPathToDependencies() {

@@ -25,8 +25,8 @@ import org.sonar.api.batch.CoverageExtension;
 import org.sonar.api.batch.Sensor;
 import org.sonar.api.batch.SensorContext;
 import org.sonar.api.resources.Project;
-import org.sonar.plugins.cobertura.api.AbstractCoberturaParser;
-import org.sonar.plugins.cobertura.api.CoberturaUtils;
+//import org.sonar.plugins.cobertura.api.AbstractCoberturaParser;
+//import org.sonar.plugins.cobertura.api.CoberturaUtils;
 import org.sonar.plugins.scala.language.Scala;
 
 import java.io.File;
@@ -34,22 +34,22 @@ import java.io.File;
 public class CoberturaSensor implements Sensor, CoverageExtension {
 
   private static final Logger LOG = LoggerFactory.getLogger(CoberturaSensor.class);
-  private static final AbstractCoberturaParser COBERTURA_PARSER = new ScalaCoberturaParser();
+//  private static final AbstractCoberturaParser COBERTURA_PARSER = new ScalaCoberturaParser();
 
   public boolean shouldExecuteOnProject(Project project) {
     return project.getAnalysisType().isDynamic(true) && Scala.INSTANCE.getKey().equals(project.getLanguageKey());
   }
 
   public void analyse(Project project, SensorContext context) {
-    File report = CoberturaUtils.getReport(project);
-    if (report != null) {
-      parseReport(report, context);
-    }
+//    File report = CoberturaUtils.getReport(project);
+//    if (report != null) {
+//      parseReport(report, context);
+//    }
   }
 
   protected void parseReport(File xmlFile, final SensorContext context) {
     LOG.info("parsing {}", xmlFile);
-    COBERTURA_PARSER.parseReport(xmlFile, context);
+//    COBERTURA_PARSER.parseReport(xmlFile, context);
   }
 
   @Override

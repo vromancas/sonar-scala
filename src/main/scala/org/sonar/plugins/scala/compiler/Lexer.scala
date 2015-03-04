@@ -82,8 +82,8 @@ class Lexer {
         foundToken = token != 0
       }
 
-      override def foundComment(value: String, start: Int, end: Int) = {
-        super.foundComment(value, start, end)
+      def foundComment(value: String, start: Int, end: Int) = {
+//        super.foundComment(value, start, end)
 
         def isHeaderComment(value: String) = {
           !foundToken && comments.isEmpty && value.trim().startsWith("/*")
@@ -92,7 +92,7 @@ class Lexer {
         lastDocCommentRange match {
 
           case Some(r: Range) => {
-            if (r.start != start || r.end != end) {
+            if (r.pos.start != start || r.pos.end != end) {
               comments += new Comment(value, CommentType.NORMAL)
             }
           }
@@ -107,10 +107,10 @@ class Lexer {
         }
       }
 
-      override def foundDocComment(value: String, start: Int, end: Int) = {
-        super.foundDocComment(value, start, end)
+      def foundDocComment(value: String, start: Int, end: Int) = {
+//        super.foundDocComment(value, start, end)
         comments += new Comment(value, CommentType.DOC)
-        lastDocCommentRange = Some(Range(start, end))
+//        lastDocCommentRange = Some(Range(start, end))
       }
     }
 
